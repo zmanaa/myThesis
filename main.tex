@@ -1,0 +1,73 @@
+\documentclass[12pt,twoside]{report}
+
+\input{Macros/myMacros}
+
+\begin{document}
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    %emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},
+    }
+
+% Title page
+\input{Macros/title page}
+
+
+%\input{Chapters/Abstract}
+
+\chapter*{Preface and Acknowledgments.}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter*{Nomenclature}
+\input{Chapters/Nomen}
+
+%\chapter{Introduction}
+%\input{Chapters/Introduction}
+
+\chapter{Attitude Parameterization of Rigid Body}
+\input{Chapters/Attitude Parameterization of Rigid Bodies}
+
+\chapter{Coordinate Systems and Reference Frames}
+\input{Chapters/Coordinate Systems}
+
+\chapter{Space Environment}
+\input{Chapters/Space Env}
+
+\chapter{Space Perturbations}
+\input{Chapters/Space Dist}
+
+\chapter{Equations of Motion}\label{chap:EQN}
+\input{Chapters/Equations of Motion}
+
+\chapter{State Estimation}
+\input{Chapters/state estimation}
+
+\chapter{Control Algorithm}
+\input{Chapters/controls}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{ref.bib}
+
+\clearpage
+
+%\appendix
+%\chapter{MATLAB}
+%\input{Chapters/Appendix}
+
+\end{document}
